@@ -49,6 +49,26 @@ namespace Single_LinkeList
         }
 
         /// <summary>
+        /// 리스트 맨 뒤에 값 추가
+        /// </summary>
+        /// <param name="value"></param>
+        public void Add_Back(int value)
+        {
+            Node node = frontNode;
+
+            while (node.next != null)
+            {
+                node = node.next;
+            }
+
+            Node node2 = new Node();
+            node2.value = value;
+            node2.next = null;
+            node.next = node2;
+            length++;
+        }
+
+        /// <summary>
         /// 리스트 맨 앞에서 부터 확인해서 값 제거
         /// </summary>
         /// <param name="value"></param>
